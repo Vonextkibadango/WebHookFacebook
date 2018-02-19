@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<h1>My first PHP page</h1>
-
 <?php
-echo "Hello World!";
-?>
+echo "Hello World";
+$challenge = $_REQUEST['hub_challenge'];
+$veify_token  = $_REQUEST['hub_verify_token'];
 
-</body>
-</html>
+if ($veify_token  === 'abc123'){
+	echo $challenge;
+}
+
+?>
